@@ -71,7 +71,7 @@ public class PlayingCardsServices {
      * @return Retourne une liste de 10 cartes non triées.
      */
     private List<Card> drawnCards(Pack packOfCard) {
-        LOGGER.info("=====> Tirer une main de {} cartes non trié.");
+        LOGGER.info("=====> Tirer une main de {} cartes non trié.", NUMBER_OF_HAND_CARDS);
         try {
             List<Card> hand = packOfCard.getCards().subList(0, NUMBER_OF_HAND_CARDS);
             packOfCard.setCards(packOfCard.getCards().subList(NUMBER_OF_HAND_CARDS , packOfCard.getCards().size()));
